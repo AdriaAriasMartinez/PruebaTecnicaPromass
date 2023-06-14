@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Cinzel-VariableFont_wght.ttf">
+            <string>Cinzel-Regular</string>
+            <string>CinzelRoman-Black</string>
+            <string>CinzelRoman-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="189" id="cN4-Rx-IUE" customClass="PostTableViewCell" customModule="AAriasPromass" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="189"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cN4-Rx-IUE" id="v9J-OU-Lxj">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="189"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UDm-g6-Klq">
+                        <rect key="frame" x="0.0" y="8" width="320" height="174"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AdrianArias Martinez" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0q-sR-TOb">
+                                <rect key="frame" x="115" y="74" width="197" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="197" id="OMR-R0-glb"/>
+                                    <constraint firstAttribute="height" constant="18" id="ubK-v2-XtC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="CinzelRoman-Bold" family="Cinzel" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="qwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiop" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Efu-Qn-eko">
+                                <rect key="frame" x="8" y="111" width="304" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="5jo-bI-PZl"/>
+                                    <constraint firstAttribute="width" constant="304" id="8Sx-IC-JJl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Cinzel-Regular" family="Cinzel" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23/05/2023" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="prY-AV-k5U">
+                                <rect key="frame" x="167" y="91" width="93" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="93" id="2B5-hf-stG"/>
+                                    <constraint firstAttribute="height" constant="18" id="c6M-QV-fVw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Cinzel-Regular" family="Cinzel" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nueva Publicación" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qac-rr-j1L">
+                                <rect key="frame" x="115" y="0.0" width="197" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="NuI-Xg-iu2"/>
+                                    <constraint firstAttribute="width" constant="197" id="VLB-Xe-YUn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="CinzelRoman-Black" family="Cinzel" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3qy-YF-lxB">
+                                <rect key="frame" x="17" y="19" width="90" height="99"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="LK5-g4-OOB"/>
+                                    <constraint firstAttribute="height" constant="99" id="WPW-ga-1Iz"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="Efu-Qn-eko" firstAttribute="leading" secondItem="UDm-g6-Klq" secondAttribute="leading" constant="8" id="0ek-Bx-kZm"/>
+                            <constraint firstAttribute="width" constant="320" id="A5c-Sd-nEr"/>
+                            <constraint firstAttribute="trailing" secondItem="prY-AV-k5U" secondAttribute="trailing" constant="60" id="BqP-fz-ve7"/>
+                            <constraint firstAttribute="bottom" secondItem="Efu-Qn-eko" secondAttribute="bottom" constant="-7" id="DQm-6s-qgG"/>
+                            <constraint firstItem="N0q-sR-TOb" firstAttribute="leading" secondItem="UDm-g6-Klq" secondAttribute="leading" constant="115" id="E4a-Bm-uDj"/>
+                            <constraint firstItem="Efu-Qn-eko" firstAttribute="top" secondItem="3qy-YF-lxB" secondAttribute="bottom" constant="-7" id="JTv-Mu-hhj"/>
+                            <constraint firstItem="qac-rr-j1L" firstAttribute="leading" secondItem="UDm-g6-Klq" secondAttribute="leading" constant="115" id="NFS-Of-aqP"/>
+                            <constraint firstItem="prY-AV-k5U" firstAttribute="leading" secondItem="3qy-YF-lxB" secondAttribute="trailing" constant="60" id="X5Y-bD-mg3"/>
+                            <constraint firstItem="3qy-YF-lxB" firstAttribute="leading" secondItem="UDm-g6-Klq" secondAttribute="leading" constant="17" id="aZ3-Qv-ure"/>
+                            <constraint firstItem="qac-rr-j1L" firstAttribute="top" secondItem="UDm-g6-Klq" secondAttribute="top" id="aud-Ut-7jt"/>
+                            <constraint firstItem="prY-AV-k5U" firstAttribute="leading" secondItem="UDm-g6-Klq" secondAttribute="leading" constant="167" id="fAw-WX-tdo"/>
+                            <constraint firstItem="Efu-Qn-eko" firstAttribute="top" secondItem="prY-AV-k5U" secondAttribute="bottom" constant="2" id="jy3-EO-ZWL"/>
+                            <constraint firstItem="3qy-YF-lxB" firstAttribute="top" secondItem="UDm-g6-Klq" secondAttribute="top" constant="19" id="mcF-KJ-sYx"/>
+                            <constraint firstAttribute="trailing" secondItem="qac-rr-j1L" secondAttribute="trailing" constant="8" id="nOu-Si-se5"/>
+                            <constraint firstAttribute="trailing" secondItem="Efu-Qn-eko" secondAttribute="trailing" constant="8" id="pE6-NP-1xx"/>
+                            <constraint firstItem="prY-AV-k5U" firstAttribute="top" secondItem="N0q-sR-TOb" secondAttribute="bottom" constant="-1" id="qNr-gy-TWm"/>
+                            <constraint firstAttribute="trailing" secondItem="N0q-sR-TOb" secondAttribute="trailing" constant="8" id="rCf-SW-XkK"/>
+                            <constraint firstAttribute="height" constant="174" id="yzU-zJ-i3U"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="UDm-g6-Klq" firstAttribute="top" secondItem="v9J-OU-Lxj" secondAttribute="top" constant="8" id="OCZ-hS-nmf"/>
+                    <constraint firstItem="UDm-g6-Klq" firstAttribute="leading" secondItem="v9J-OU-Lxj" secondAttribute="leading" id="Pp9-Yv-ett"/>
+                    <constraint firstAttribute="trailing" secondItem="UDm-g6-Klq" secondAttribute="trailing" id="Uuv-ft-QsZ"/>
+                    <constraint firstAttribute="bottom" secondItem="UDm-g6-Klq" secondAttribute="bottom" constant="7" id="ffK-Tb-XCe"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="W4q-2E-6xj"/>
+            <connections>
+                <outlet property="autorLabel" destination="N0q-sR-TOb" id="osS-Rt-HSK"/>
+                <outlet property="contenidoLabel" destination="Efu-Qn-eko" id="1Fv-fz-5lK"/>
+                <outlet property="fechaLabel" destination="prY-AV-k5U" id="PAS-SS-nRm"/>
+                <outlet property="miView" destination="UDm-g6-Klq" id="2pA-Wa-jND"/>
+                <outlet property="postImageView" destination="3qy-YF-lxB" id="rQy-OD-TNv"/>
+                <outlet property="tituloLabel" destination="qac-rr-j1L" id="CyW-Oz-WgW"/>
+            </connections>
+            <point key="canvasLocation" x="138.93129770992365" y="70.774647887323951"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

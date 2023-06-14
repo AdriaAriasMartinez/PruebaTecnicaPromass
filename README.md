@@ -12,6 +12,10 @@ Obligatorio:
 -Dispositivo Mac
 -Xcode instalado
 
+El proyecto incluye pods, por lo que para su funcionamiento se debera abrir una terminal y ejecutar los siguientes comandos:
+cd/ "Ruta del proyecto"
+pod install
+
 Opcional: 
 -Dispositivo iOS físico con versión de iOS 15 o posterior
 

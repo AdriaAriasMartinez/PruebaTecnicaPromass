@@ -16,25 +16,10 @@ class FireBaseViewModel {
     var userDocument: DocumentReference? = nil
     
     let coreViewmodel = CoreViewModel()
-    func GetByName(){
-        
-        usersCollection = db.collection("usuarios")
-        userDocument = usersCollection!.document("Usuario1")
-        
-        
-        userDocument!.getDocument { document, error in
-            if let document = document, document.exists {
-                
-            } else {
-                print("El documento no existe o ha ocurrido un error:", error?.localizedDescription ?? "")
-            }
-        }
-    }
     
     func getAll1(result: @escaping([Post]?, Error?)-> Void){
         var posts = [Post]()
-        usersCollection = db.collection("usuarios")
-        userDocument = usersCollection!.document("Usuario1")
+        usersCollection = db.collection("posts")
         
         usersCollection?.getDocuments(completion: { querySnapshot, error in
             if let error = error {
@@ -71,7 +56,7 @@ class FireBaseViewModel {
         }
         
         
-        let collectionRef = db.collection("usuarios")
+        let collectionRef = db.collection("posts")
         let data = toDictionary(post: post)
         
         collectionRef.document(id).setData(data){ error in
@@ -97,7 +82,7 @@ class FireBaseViewModel {
     }
     func getById(id: String, result: @escaping( Post?, Error?)-> Void){
         
-        let collectionRef = db.collection("usuarios")
+        let collectionRef = db.collection("posts")
         collectionRef.document(id).getDocument { documentSnapshot, error in
             if let documentData = documentSnapshot?.data() {
                 //print("Error al buscar documento: \(error.localizedDescription)")
@@ -113,7 +98,7 @@ class FireBaseViewModel {
     }
     func getByAutor(autor: String, result: @escaping([Post]?, Error?)->Void){
         var posts = [Post]()
-        let collectionRef = db.collection("usuarios")
+        let collectionRef = db.collection("posts")
         collectionRef.whereField("autor", isGreaterThanOrEqualTo: autor).whereField("autor", isLessThan: autor + "\u{f8ff}").getDocuments { querySnapshots, error in
             if let error = error {
                 result(nil, error)
@@ -148,7 +133,7 @@ class FireBaseViewModel {
     
     func getByContent(content: [String], result: @escaping([Post]?, Error?)->Void){
         var posts = [Post]()
-        let collectionRef = db.collection("usuarios")
+        let collectionRef = db.collection("posts")
         
         /*collectionRef.whereField("contenido", isGreaterThanOrEqualTo: "\u{f8ff}" + content).whereField("contenido", isLessThan: content + "\u{f8ff}").getDocuments*/
         collectionRef.whereField("contenido", arrayContainsAny: content).getDocuments { querySnapshots, error in
@@ -180,7 +165,7 @@ class FireBaseViewModel {
     
     func getByTitulo(titulo: String, result: @escaping([Post]?, Error?)->Void){
         var posts = [Post]()
-        let collectionRef = db.collection("usuarios")
+        let collectionRef = db.collection("posts")
         collectionRef.whereField("titulo", isGreaterThanOrEqualTo: titulo).whereField("titulo", isLessThan: titulo + "\u{f8ff}").getDocuments { querySnapshots, error in
             if let error = error {
                 result(nil, error)
@@ -210,7 +195,7 @@ class FireBaseViewModel {
     }
     func Delete(id: String, result: @escaping([Post]?, Error?)->Void){
         
-        let collectionRef = db.collection("usuarios")
+        let collectionRef = db.collection("posts")
         let documentRef = collectionRef.document(id)
         
         documentRef.delete { error in
@@ -222,7 +207,7 @@ class FireBaseViewModel {
         }
     }
     func Update(post: Post){
-        let documentRef = db.collection("usuarios").document(post.titulo)
+        let documentRef = db.collection("posts").document(post.titulo)
         
         let data = toDictionary(post: post)
         

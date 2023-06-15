@@ -74,7 +74,9 @@ class FormViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
                     _ = self.fireBaseViewModel.add(id: post.titulo, post: post)
                     
                     let alert = UIAlertController(title: "Aviso", message: "Post creado correctamente", preferredStyle: .alert)
-                    let ok = UIAlertAction(title: "Ok", style: .default)
+                    let ok = UIAlertAction(title: "Ok", style: .default){ action in
+                        self.navigationController?.popViewController(animated: true)
+                    }
                     alert.addAction(ok)
                     self.present(alert, animated: true)
                 }
@@ -98,7 +100,9 @@ class FormViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
             let post = Post(autor: autor, contenido: contenidoArreglo, fecha: date, titulo: titulo, imagen: self.imgstr)
             fireBaseViewModel.Update(post: post)
             let alert = UIAlertController(title: "Aviso", message: "Post actualizado correctamente", preferredStyle: .alert)
-            let ok = UIAlertAction(title: "Ok", style: .default)
+            let ok = UIAlertAction(title: "Ok", style: .default) { action in
+                self.navigationController?.popViewController(animated: true)
+            }
             alert.addAction(ok)
             self.present(alert, animated: true)
             

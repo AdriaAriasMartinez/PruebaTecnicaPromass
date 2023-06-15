@@ -65,7 +65,6 @@ Además, cuando no se tiene conexión a internet, el botón de agregar una nueva
 
 
 
-
 ## Construido con 🛠️
 
 
